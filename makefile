@@ -19,4 +19,5 @@ clean:
 	-rm -f $(OBJ) *~
 
 purge: clean
+	cd ArvoreAVL && $(MAKE) purge
 	-rm -f $(EXEC)
