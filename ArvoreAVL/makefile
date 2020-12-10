@@ -3,7 +3,7 @@ CFLAGS=-ansi -Wall
 OBJ=avl.o teste_avl.o
 EXEC=teste_avl
 
-all: teste_avl clean
+all: teste_avl
 
 teste_avl: $(OBJ)
 	$(CC) $(OBJ) -o $(EXEC) $(CFLAGS)
