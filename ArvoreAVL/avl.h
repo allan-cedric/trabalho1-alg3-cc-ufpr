@@ -1,5 +1,5 @@
 /* 
-   Header file : 'AVL.h'
+   Header file : 'avl.h'
    Escrito por : Allan Cedric G.B. Alves da Silva
    Profile : Aluno de graduação do curso de Ciência da Computação (UFPR)
    GRR : 20190351
