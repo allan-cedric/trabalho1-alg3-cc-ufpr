@@ -1,5 +1,4 @@
 #include "ArvoreAVL/avl.h"
-#define _SUCESSOR_
 
 /* Impressão emOrdem da árvore AVL */
 void printInOrder(AVL *root, int level);
