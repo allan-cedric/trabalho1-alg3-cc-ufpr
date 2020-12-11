@@ -8,6 +8,27 @@
 #ifndef AVL_H
 #define AVL_H
 
+/*
+  Setup para o algoritmo de remoção, pode escolher pelo o formato com sucessor ou antecessor
+*/
+
+/* Comente essa linha para usar o sucessor */
+#define _PREDECESSOR_
+
+#ifndef _PREDECESSOR_
+#define _SUCESSOR_
+#endif
+
+#ifndef _PREDECESSOR_
+#ifndef _SUCESSOR_
+#define _PREDECESSOR_
+#endif
+#endif
+
+/*
+  Bibliotecas
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -54,14 +75,8 @@ AVL *maxKeyAVL(AVL *node);
 /* Retorna o número de nodos da AVL */
 int numNodesAVL(AVL *node);
 
-/* Retorna a altura (nível máximo) da AVL */
-int heightAVL(AVL *node);
-
 /* Remove um nodo da AVL */
 AVL *removeNodeAVL(AVL *root, int key);
-
-/* Redireciona uma sub-árvore como filho de um novo nodo */
-AVL *transplantSubtreeAVL(AVL *root, AVL *node, AVL *nodeChild);
 
 /* Retorna a altura de um certo node */
 int heightNodeAVL(AVL *node);
@@ -82,6 +97,6 @@ AVL *RRRotationAVL(AVL *root);
 AVL *LRRotationAVL(AVL *root);
 
 /* Rotação dupla a esquerda (Caso Direita-Esquerda) */
-AVL* RLRotationAVL(AVL *root);
+AVL *RLRotationAVL(AVL *root);
 
 #endif
