@@ -12,7 +12,7 @@
   Setup para o algoritmo de remoção, pode escolher pelo formato com sucessor ou antecessor
 */
 
-/* Comente essa linha imediatamente abaixo para usar o sucessor */
+/* Comente essa linha imediatamente abaixo para usar o sucessor, por default está configurado para antecessor */
 #define _PREDECESSOR_
 
 #ifndef _PREDECESSOR_
