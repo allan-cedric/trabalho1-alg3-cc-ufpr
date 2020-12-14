@@ -146,8 +146,6 @@ AVL *removeNodeAVL(AVL *root, int key)
 	if (key < root->key)
 	{
 		root->left = removeNodeAVL(root->left, key);
-		if (root->left) /* Ajusta possível pai */
-			root->left->parent = root;
 		/* Balanceamento */
 		root->height = largest(heightNodeAVL(root->left), heightNodeAVL(root->right)) + 1;
 		if (balanceFactorAVL(root) == 2)
@@ -160,8 +158,6 @@ AVL *removeNodeAVL(AVL *root, int key)
 	else if (key > root->key)
 	{
 		root->right = removeNodeAVL(root->right, key);
-		if (root->right) /* Ajusta possível pai */
-			root->right->parent = root;
 		/* Balanceamento */
 		root->height = largest(heightNodeAVL(root->left), heightNodeAVL(root->right)) + 1;
 		if (balanceFactorAVL(root) == 2)
@@ -178,6 +174,8 @@ AVL *removeNodeAVL(AVL *root, int key)
 		{
 			AVL *nodeToRemove = root;
 			root = (root->left ? root->left : root->right);
+			if (root) /* Ajusta possível pai */
+				root->parent = nodeToRemove->parent;
 			free(nodeToRemove);
 			nodeToRemove = NULL;
 		}
