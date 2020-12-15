@@ -1,23 +1,21 @@
 CC=gcc
 CFLAGS=-ansi -Wall
-OBJ=myavl.o ArvoreAVL/avl.o
+OBJ=avl.o myavl.o
 EXEC=myavl
 
-all: subsystem myavl clean
-
-subsystem:
-	cd ArvoreAVL && $(MAKE)
+all: myavl clean
 
 myavl: $(OBJ)
 	$(CC) $(OBJ) -o $(EXEC) $(CFLAGS)
+
+avl.o: ArvoreAVL/avl.h ArvoreAVL/avl.c
+	$(CC) -c ArvoreAVL/avl.c $(CFLAGS)
 
 myavl.o: ArvoreAVL/avl.h ArvoreAVL/avl.c
 	$(CC) -c myavl.c $(CFLAGS)
 
 clean:
-	cd ArvoreAVL && $(MAKE) clean
 	-rm -f $(OBJ) *~
 
 purge: clean
-	cd ArvoreAVL && $(MAKE) purge
 	-rm -f $(EXEC)
