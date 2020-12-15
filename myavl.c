@@ -26,7 +26,6 @@ int main()
     printInOrder(rootAVL, 0);
 
     rootAVL = destroyAVL(rootAVL);
-    rootAVL = NULL;
 
     return 0;
 }
