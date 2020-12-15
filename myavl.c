@@ -23,7 +23,7 @@ int main()
     }
 
     /* Output esperado */
-    printInOrder(rootAVL, -1);
+    printInOrder(rootAVL, 0);
 
     rootAVL = destroyAVL(rootAVL);
     rootAVL = NULL;
@@ -35,9 +35,8 @@ void printInOrder(AVL *root, int level)
 {
     if (root)
     {
-        level++;
-        printInOrder(root->left, level);
+        printInOrder(root->left, level + 1);
         fprintf(stdout, "%i,%i\n", root->key, level);
-        printInOrder(root->right, level);
+        printInOrder(root->right, level + 1);
     }
 }
