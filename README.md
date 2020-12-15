@@ -4,6 +4,8 @@
     - Lib: ArvoreAVL
         
     - Source file do trabalho: myavl.c
+
+    - Breve documentação feita em LaTeX: documentationAVL.pdf
         
     - E um 'makefile'
   
