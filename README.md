@@ -1,4 +1,4 @@
-## Trabalho 1 de Algoritmos e Estrutura de Dados III (CI1057) - Ciência da Computação - UFPR:
+## Trabalho 1 de Algoritmos e Estruturas de Dados III (CI1057) - Ciência da Computação - UFPR:
 ### Arquivos:
 
     - Lib: ArvoreAVL
