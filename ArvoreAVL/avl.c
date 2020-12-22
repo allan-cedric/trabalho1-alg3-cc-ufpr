@@ -36,7 +36,7 @@ AVL *newNode(int key)
 /* 
 	Método de inserção em uma árvore AVL:
 
-	Foi realizado recursivamente, e o príncípio
+	Foi realizado recursivamente, e o princípio
 	desse algoritmo é inserir um novo nodo como folha.
 */
 AVL *insertNodeAVL(AVL *root, int key)
