@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+NC='\033[0m'
+
+for i in {1..18}
+do
+    ./myavl < ./test_cases/test$i.in > ./test_cases/test$i.out
+
+    echo "test${i}.in:"
+    diff ./test_cases/test$i.out ./test_cases/expec$i.out
+    if [ $? -eq 0 ]
+    then
+        echo -e "${GREEN}Success${NC}\n"
+    else
+        echo -e "${RED}Failed${NC}\n"
+    fi
+
+    rm ./test_cases/test$i.out 
+done
