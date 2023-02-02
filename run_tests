@@ -2,13 +2,14 @@
 
 RED='\033[1;31m'
 GREEN='\033[1;32m'
+CYAN='\033[1;36m'
 NC='\033[0m'
 
 for i in {1..18}
 do
     ./myavl < ./test_cases/test$i.in > ./test_cases/test$i.out
 
-    echo "test${i}.in:"
+    echo -e "${CYAN}test${i}.in:${NC}"
     diff ./test_cases/test$i.out ./test_cases/expec$i.out
     if [ $? -eq 0 ]
     then
